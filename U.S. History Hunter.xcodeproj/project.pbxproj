@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFC037391C557A4500F837AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC037381C557A4500F837AB /* AppDelegate.swift */; };
+		EFC0373B1C557A4500F837AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC0373A1C557A4500F837AB /* ViewController.swift */; };
+		EFC0373E1C557A4500F837AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC0373C1C557A4500F837AB /* Main.storyboard */; };
+		EFC037401C557A4500F837AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC0373F1C557A4500F837AB /* Assets.xcassets */; };
+		EFC037431C557A4500F837AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC037411C557A4500F837AB /* LaunchScreen.storyboard */; };
+		EFC0374E1C557A4500F837AB /* U_S__History_HunterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC0374D1C557A4500F837AB /* U_S__History_HunterTests.swift */; };
+		EFC037591C557A4500F837AB /* U_S__History_HunterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC037581C557A4500F837AB /* U_S__History_HunterUITests.swift */; };
+		EFC037671C557C2300F837AB /* PublicLandmark.json in Resources */ = {isa = PBXBuildFile; fileRef = EFC037661C557C2300F837AB /* PublicLandmark.json */; };
+		EFC037691C557C3200F837AB /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC037681C557C3200F837AB /* JSON.swift */; };
+		EFC0376B1C557C7200F837AB /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC0376A1C557C7200F837AB /* Landmark.swift */; };
+		EFC0376D1C55803800F837AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0376C1C55803800F837AB /* MapKit.framework */; };
+		EFC0376F1C55804C00F837AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0376E1C55804C00F837AB /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFC0374A1C557A4500F837AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFC0372D1C557A4500F837AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC037341C557A4500F837AB;
+			remoteInfo = "U.S. History Hunter";
+		};
+		EFC037551C557A4500F837AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFC0372D1C557A4500F837AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC037341C557A4500F837AB;
+			remoteInfo = "U.S. History Hunter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFC037351C557A4500F837AB /* U.S. History Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "U.S. History Hunter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC037381C557A4500F837AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFC0373A1C557A4500F837AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFC0373D1C557A4500F837AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFC0373F1C557A4500F837AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFC037421C557A4500F837AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFC037441C557A4500F837AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC037491C557A4500F837AB /* U.S. History HunterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "U.S. History HunterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC0374D1C557A4500F837AB /* U_S__History_HunterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U_S__History_HunterTests.swift; sourceTree = "<group>"; };
+		EFC0374F1C557A4500F837AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC037541C557A4500F837AB /* U.S. History HunterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "U.S. History HunterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC037581C557A4500F837AB /* U_S__History_HunterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U_S__History_HunterUITests.swift; sourceTree = "<group>"; };
+		EFC0375A1C557A4500F837AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC037661C557C2300F837AB /* PublicLandmark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicLandmark.json; sourceTree = "<group>"; };
+		EFC037681C557C3200F837AB /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		EFC0376A1C557C7200F837AB /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		EFC0376C1C55803800F837AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EFC0376E1C55804C00F837AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFC037321C557A4500F837AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC0376F1C55804C00F837AB /* CoreLocation.framework in Frameworks */,
+				EFC0376D1C55803800F837AB /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC037461C557A4500F837AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC037511C557A4500F837AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFC0372C1C557A4500F837AB = {
+			isa = PBXGroup;
+			children = (
+				EFC037681C557C3200F837AB /* JSON.swift */,
+				EFC037661C557C2300F837AB /* PublicLandmark.json */,
+				EFC037371C557A4500F837AB /* U.S. History Hunter */,
+				EFC037701C55806D00F837AB /* Frameworks */,
+				EFC0374C1C557A4500F837AB /* U.S. History HunterTests */,
+				EFC037571C557A4500F837AB /* U.S. History HunterUITests */,
+				EFC037361C557A4500F837AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFC037361C557A4500F837AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFC037351C557A4500F837AB /* U.S. History Hunter.app */,
+				EFC037491C557A4500F837AB /* U.S. History HunterTests.xctest */,
+				EFC037541C557A4500F837AB /* U.S. History HunterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFC037371C557A4500F837AB /* U.S. History Hunter */ = {
+			isa = PBXGroup;
+			children = (
+				EFC037381C557A4500F837AB /* AppDelegate.swift */,
+				EFC0373A1C557A4500F837AB /* ViewController.swift */,
+				EFC0376A1C557C7200F837AB /* Landmark.swift */,
+				EFC0373C1C557A4500F837AB /* Main.storyboard */,
+				EFC0373F1C557A4500F837AB /* Assets.xcassets */,
+				EFC037411C557A4500F837AB /* LaunchScreen.storyboard */,
+				EFC037441C557A4500F837AB /* Info.plist */,
+			);
+			path = "U.S. History Hunter";
+			sourceTree = "<group>";
+		};
+		EFC0374C1C557A4500F837AB /* U.S. History HunterTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFC0374D1C557A4500F837AB /* U_S__History_HunterTests.swift */,
+				EFC0374F1C557A4500F837AB /* Info.plist */,
+			);
+			path = "U.S. History HunterTests";
+			sourceTree = "<group>";
+		};
+		EFC037571C557A4500F837AB /* U.S. History HunterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFC037581C557A4500F837AB /* U_S__History_HunterUITests.swift */,
+				EFC0375A1C557A4500F837AB /* Info.plist */,
+			);
+			path = "U.S. History HunterUITests";
+			sourceTree = "<group>";
+		};
+		EFC037701C55806D00F837AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFC0376E1C55804C00F837AB /* CoreLocation.framework */,
+				EFC0376C1C55803800F837AB /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFC037341C557A4500F837AB /* U.S. History Hunter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC0375D1C557A4500F837AB /* Build configuration list for PBXNativeTarget "U.S. History Hunter" */;
+			buildPhases = (
+				EFC037311C557A4500F837AB /* Sources */,
+				EFC037321C557A4500F837AB /* Frameworks */,
+				EFC037331C557A4500F837AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "U.S. History Hunter";
+			productName = "U.S. History Hunter";
+			productReference = EFC037351C557A4500F837AB /* U.S. History Hunter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFC037481C557A4500F837AB /* U.S. History HunterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC037601C557A4500F837AB /* Build configuration list for PBXNativeTarget "U.S. History HunterTests" */;
+			buildPhases = (
+				EFC037451C557A4500F837AB /* Sources */,
+				EFC037461C557A4500F837AB /* Frameworks */,
+				EFC037471C557A4500F837AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFC0374B1C557A4500F837AB /* PBXTargetDependency */,
+			);
+			name = "U.S. History HunterTests";
+			productName = "U.S. History HunterTests";
+			productReference = EFC037491C557A4500F837AB /* U.S. History HunterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFC037531C557A4500F837AB /* U.S. History HunterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC037631C557A4500F837AB /* Build configuration list for PBXNativeTarget "U.S. History HunterUITests" */;
+			buildPhases = (
+				EFC037501C557A4500F837AB /* Sources */,
+				EFC037511C557A4500F837AB /* Frameworks */,
+				EFC037521C557A4500F837AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFC037561C557A4500F837AB /* PBXTargetDependency */,
+			);
+			name = "U.S. History HunterUITests";
+			productName = "U.S. History HunterUITests";
+			productReference = EFC037541C557A4500F837AB /* U.S. History HunterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFC0372D1C557A4500F837AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "s.Ticky Games";
+				TargetAttributes = {
+					EFC037341C557A4500F837AB = {
+						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					EFC037481C557A4500F837AB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = EFC037341C557A4500F837AB;
+					};
+					EFC037531C557A4500F837AB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = EFC037341C557A4500F837AB;
+					};
+				};
+			};
+			buildConfigurationList = EFC037301C557A4500F837AB /* Build configuration list for PBXProject "U.S. History Hunter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFC0372C1C557A4500F837AB;
+			productRefGroup = EFC037361C557A4500F837AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFC037341C557A4500F837AB /* U.S. History Hunter */,
+				EFC037481C557A4500F837AB /* U.S. History HunterTests */,
+				EFC037531C557A4500F837AB /* U.S. History HunterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFC037331C557A4500F837AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC037431C557A4500F837AB /* LaunchScreen.storyboard in Resources */,
+				EFC037401C557A4500F837AB /* Assets.xcassets in Resources */,
+				EFC0373E1C557A4500F837AB /* Main.storyboard in Resources */,
+				EFC037671C557C2300F837AB /* PublicLandmark.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC037471C557A4500F837AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC037521C557A4500F837AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFC037311C557A4500F837AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC037691C557C3200F837AB /* JSON.swift in Sources */,
+				EFC0373B1C557A4500F837AB /* ViewController.swift in Sources */,
+				EFC037391C557A4500F837AB /* AppDelegate.swift in Sources */,
+				EFC0376B1C557C7200F837AB /* Landmark.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC037451C557A4500F837AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC0374E1C557A4500F837AB /* U_S__History_HunterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFC037501C557A4500F837AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC037591C557A4500F837AB /* U_S__History_HunterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFC0374B1C557A4500F837AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC037341C557A4500F837AB /* U.S. History Hunter */;
+			targetProxy = EFC0374A1C557A4500F837AB /* PBXContainerItemProxy */;
+		};
+		EFC037561C557A4500F837AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC037341C557A4500F837AB /* U.S. History Hunter */;
+			targetProxy = EFC037551C557A4500F837AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFC0373C1C557A4500F837AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC0373D1C557A4500F837AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFC037411C557A4500F837AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC037421C557A4500F837AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFC0375B1C557A4500F837AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFC0375C1C557A4500F837AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFC0375E1C557A4500F837AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "U.S. History Hunter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "s.Ticky-Studios.U-S--History-Hunter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFC0375F1C557A4500F837AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "U.S. History Hunter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "s.Ticky-Studios.U-S--History-Hunter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EFC037611C557A4500F837AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "U.S. History HunterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "s.Ticky-Studios.U-S--History-HunterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/U.S. History Hunter.app/U.S. History Hunter";
+			};
+			name = Debug;
+		};
+		EFC037621C557A4500F837AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "U.S. History HunterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "s.Ticky-Studios.U-S--History-HunterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/U.S. History Hunter.app/U.S. History Hunter";
+			};
+			name = Release;
+		};
+		EFC037641C557A4500F837AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "U.S. History HunterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "s.Ticky-Studios.U-S--History-HunterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "U.S. History Hunter";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EFC037651C557A4500F837AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "U.S. History HunterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "s.Ticky-Studios.U-S--History-HunterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "U.S. History Hunter";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFC037301C557A4500F837AB /* Build configuration list for PBXProject "U.S. History Hunter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC0375B1C557A4500F837AB /* Debug */,
+				EFC0375C1C557A4500F837AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC0375D1C557A4500F837AB /* Build configuration list for PBXNativeTarget "U.S. History Hunter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC0375E1C557A4500F837AB /* Debug */,
+				EFC0375F1C557A4500F837AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC037601C557A4500F837AB /* Build configuration list for PBXNativeTarget "U.S. History HunterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC037611C557A4500F837AB /* Debug */,
+				EFC037621C557A4500F837AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC037631C557A4500F837AB /* Build configuration list for PBXNativeTarget "U.S. History HunterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC037641C557A4500F837AB /* Debug */,
+				EFC037651C557A4500F837AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFC0372D1C557A4500F837AB /* Project object */;
+}
