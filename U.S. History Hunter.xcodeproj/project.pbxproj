@@ -19,6 +19,9 @@
 		EFC0376B1C557C7200F837AB /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC0376A1C557C7200F837AB /* Landmark.swift */; };
 		EFC0376D1C55803800F837AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0376C1C55803800F837AB /* MapKit.framework */; };
 		EFC0376F1C55804C00F837AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0376E1C55804C00F837AB /* CoreLocation.framework */; };
+		EFF9707B1C61633900426719 /* test2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EFF9707A1C61633900426719 /* test2.gpx */; };
+		EFF9707D1C61737900426719 /* gpxgmap_converted.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EFF9707C1C61737900426719 /* gpxgmap_converted.gpx */; };
+		EFF9707F1C61892C00426719 /* gpxgmap_converted-2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EFF9707E1C61892C00426719 /* gpxgmap_converted-2.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		EFC0376A1C557C7200F837AB /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		EFC0376C1C55803800F837AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EFC0376E1C55804C00F837AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EFF9707A1C61633900426719 /* test2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test2.gpx; sourceTree = "<group>"; };
+		EFF9707C1C61737900426719 /* gpxgmap_converted.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gpxgmap_converted.gpx; sourceTree = "<group>"; };
+		EFF9707E1C61892C00426719 /* gpxgmap_converted-2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "gpxgmap_converted-2.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,9 @@
 		EFC0372C1C557A4500F837AB = {
 			isa = PBXGroup;
 			children = (
+				EFF9707E1C61892C00426719 /* gpxgmap_converted-2.gpx */,
+				EFF9707C1C61737900426719 /* gpxgmap_converted.gpx */,
+				EFF9707A1C61633900426719 /* test2.gpx */,
 				EFC037681C557C3200F837AB /* JSON.swift */,
 				EFC037661C557C2300F837AB /* PublicLandmark.json */,
 				EFC037371C557A4500F837AB /* U.S. History Hunter */,
@@ -218,6 +227,7 @@
 				TargetAttributes = {
 					EFC037341C557A4500F837AB = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = WCJP2UKWS4;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -260,9 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC037431C557A4500F837AB /* LaunchScreen.storyboard in Resources */,
+				EFF9707D1C61737900426719 /* gpxgmap_converted.gpx in Resources */,
+				EFF9707B1C61633900426719 /* test2.gpx in Resources */,
 				EFC037401C557A4500F837AB /* Assets.xcassets in Resources */,
 				EFC0373E1C557A4500F837AB /* Main.storyboard in Resources */,
 				EFC037671C557C2300F837AB /* PublicLandmark.json in Resources */,
+				EFF9707F1C61892C00426719 /* gpxgmap_converted-2.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,10 +445,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "U.S. History Hunter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "s.Ticky-Studios.U-S--History-Hunter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -443,10 +459,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "U.S. History Hunter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "s.Ticky-Studios.U-S--History-Hunter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

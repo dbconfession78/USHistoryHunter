@@ -17,16 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jlm-0y-buO">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jlm-0y-buO">
                                 <rect key="frame" x="0.0" y="28" width="414" height="708"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Jlm-0y-buO" secondAttribute="trailing" id="92Q-CF-bxM"/>
-                            <constraint firstItem="Jlm-0y-buO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="YBt-sB-tbX"/>
-                            <constraint firstItem="Jlm-0y-buO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pqy-Ha-gXh"/>
-                            <constraint firstItem="Jlm-0y-buO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="xN4-j1-GSS"/>
+                            <constraint firstItem="Jlm-0y-buO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1If-ZZ-lEe"/>
+                            <constraint firstAttribute="trailing" secondItem="Jlm-0y-buO" secondAttribute="trailing" id="2yi-rT-gqi"/>
+                            <constraint firstItem="Jlm-0y-buO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fUb-4Q-IfH"/>
+                            <constraint firstItem="Jlm-0y-buO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="uxR-LX-szt"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="609"/>
+            <point key="canvasLocation" x="331" y="611"/>
         </scene>
     </scenes>
 </document>

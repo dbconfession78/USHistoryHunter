@@ -8,8 +8,8 @@ class Landmark: NSObject, MKAnnotation {
  
 	init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
 		self.title = title
-		self.locationName = locationName
 		self.discipline = discipline
+		self.locationName = locationName
 		self.coordinate = coordinate
 		
 		super.init()
@@ -24,9 +24,8 @@ class Landmark: NSObject, MKAnnotation {
 	} else {
 		title = ""
 	}
-	let locationName = json[6].string
 	let discipline = json[5].string
- 
+	let locationName = json[6].string
 	// 2
 	let latitude = (json[7].string! as NSString).doubleValue
 	let longitude = (json[8].string! as NSString).doubleValue

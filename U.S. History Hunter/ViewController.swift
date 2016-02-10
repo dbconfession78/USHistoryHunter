@@ -9,45 +9,187 @@
 import UIKit
 import MapKit
 import CoreLocation
-
+import Foundation
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 	@IBOutlet weak var mapView: MKMapView!
-	
-	let locationManager = CLLocationManager()
+	var locationManager = CLLocationManager()
 	var landmarks = [Landmark]()
+	
+	struct MyVars {
+		static var prevLoc = CLLocation()
+		static var latitude = CLLocationDegrees()
+		static var longitude = CLLocationDegrees()
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
-		// Ask for Authorization from user to get current location
-		var locationManager = CLLocationManager()
-		self.locationManager.requestAlwaysAuthorization()
+		self.locationManager = CLLocationManager()
+		self.locationManager.delegate = self
 		self.locationManager.requestWhenInUseAuthorization()
-		if CLLocationManager.locationServicesEnabled() {
-			locationManager.delegate = self
-			locationManager.desiredAccuracy = kCLLocationAccuracyBest
-			locationManager.startUpdatingLocation()
+		self.mapView.showsUserLocation = true
+		self.locationManager.startUpdatingLocation()
+//		self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+
+		var landmarks: [Landmark] = [Landmark]()
+		loadInitialData()
+	}
+	
+	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		var prevLoc = MyVars.prevLoc
+		let userLoction: CLLocation = locations[0]
+		
+		let distance = calculateDisatnceBetweenTwoLocations(prevLoc, destination: userLoction)
+		if prevLoc != userLoction {
+			prevLoc = userLoction
+			MyVars.prevLoc = userLoction
 		}
 		
-		
-		
-		var landmarks: [Landmark] = [Landmark]()
-		let initialLocation = CLLocation(latitude: 40.961695, longitude: -74.187437)
-		
-		centerMapOnLocation(initialLocation)
-		mapView.delegate = self
-		
-//		let landmark = Landmark(title: "King David Kalakaua",
-//			locationName: "Waikiki Gateway Park",
-//			discipline: "Sculpture",
-//			coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
-//		
+		var latitude: CLLocationDegrees = MyVars.latitude
+		var longitude: CLLocationDegrees = MyVars.longitude
+		if distance > 1000 {
+			latitude = userLoction.coordinate.latitude
+			longitude = userLoction.coordinate.longitude
+			let latDelta: CLLocationDegrees = 0.05
+			let lonDelta: CLLocationDegrees = 0.05
+//			let span = mapView.region.span
+			let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+			let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+			let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+			self.mapView.setRegion(region, animated: false)
+			self.mapView.showsUserLocation = true
+			updateVisiblePins(region: region)
+		} else {
+			latitude = userLoction.coordinate.latitude
+			longitude = userLoction.coordinate.longitude
+			let span = mapView.region.span
+			let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+			let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+//			self.mapView.setRegion(region, animated: false)
+			self.mapView.showsUserLocation = true
+			updateVisiblePins(region: region)
+		}
 
+		if latitude != MyVars.latitude {
+			print("\(latitude), \(longitude)")
+		}
+		MyVars.latitude = latitude
+		MyVars.longitude = longitude
 		
-		loadInitialData()
 		
+	}
+
+	
+	func calculateDisatnceBetweenTwoLocations(source:CLLocation,destination:CLLocation) -> Double{
+		var distanceMeters = source.distanceFromLocation(destination)
+		var distanceKM = distanceMeters / 1000
+		
+		return distanceKM
+	}
+	
+//	func startLocationServices() {
+//		if locationManager.delegate == nil {
+//			self.locationManager = CLLocationManager()
+//		}
+//		
+//		self.locationManager = CLLocationManager()
+//		self.locationManager.delegate = self
+//		self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//		self.locationManager.requestWhenInUseAuthorization()
+//		self.locationManager.startUpdatingLocation()
+//	}
+//	
+//	func stopLocationServices() {
+//		self.locationManager.stopUpdatingLocation()
+//		self.locationManager.delegate = nil
+//	}
+
+//	let regionRadius: CLLocationDistance = 5000
+//	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//		let location = locations.last
+//		let coordinateRegion = MKCoordinateRegionMakeWithDistance(location!.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+//		mapView.setRegion(coordinateRegion, animated: true)
+//		updateVisiblePins(region: coordinateRegion)
+//		
+////		41.0605059, -74.265722
+//		
+//	}
+
+	
+	
+//	locationManager(locationManager(manager, didUpdateLocations: [locations])
+
+
+func updateVisiblePins(region region: MKCoordinateRegion) {
+//	let region = MKCoordinateRegion(center: <#T##CLLocationCoordinate2D#>, span: <#T##MKCoordinateSpan#>)
+		for landmark in landmarks {
+			let regionLat = region.center.latitude
+			let regionLong = region.center.longitude
+			
+//			print("Region: \(regionLat), \(regionLong)")
+			
+			let userLat = locationManager.location?.coordinate.latitude
+			let userLong = locationManager.location?.coordinate.longitude
+			
+//			print("User Loc.: \(userLat), \(userLong)")
+			
+			let landmarkLat = landmark.coordinate.latitude
+			let landmarkLong = landmark.coordinate.longitude
+			
+//			print("Landmark Loc.: \(landmarkLat), \(landmarkLong)")
+			
+			
+//			let userLocation = CGPoint(x: (userLat)!, y: (userLong)!)
+			let userLocation = locationManager.location
+			let landmarkLocation = CLLocation(latitude: landmarkLat, longitude: landmarkLong)
+//			let landmarkLocation = CGPoint(x: landmark.coordinate.latitude, y: landmark.coordinate.longitude)
+//			let distance = distanceBetweenPoints(startPoint: userLocation, endPoint: landmarkLocation)
+			let distance = calculateDisatnceBetweenTwoLocations(userLocation!, destination: landmarkLocation)
+			
+			if distance < 30 {
+				mapView.addAnnotation(landmark)
+			} else {
+				mapView.removeAnnotation(landmark)
+			}
+		}
+	}
+	
+	
+//	func locationManager(manager: CLLocationManager, didUpdateLocation locations: [CLLocation]) {
+//		
+//		// set last location in locations array
+//		let userLocation: CLLocation = locations[0]
+//		
+//		// get and set current lat and long from userLocation
+//		let latitude = userLocation.coordinate.latitude
+//		let longitude = userLocation.coordinate.longitude
+//		
+//		// get and set current latDelta degrees and longDelta degrees from mapView
+//		let latDelta: CLLocationDegrees = mapView.region.span.latitudeDelta
+//		let lonDelta: CLLocationDegrees = mapView.region.span.longitudeDelta
+//		
+//		// set current span using set degree variables above
+//		let span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+//		
+//		// set current location using current lat and long variables above
+//		let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+//		
+//		// set current region using location and span variables above
+//		let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+//		
+//		// uset current region above to set the mapView region
+//		self.mapView.setRegion(region, animated: true)
+//		
+//		// allow the map to show the blue dot current location
+//		mapView.showsUserLocation = true
+//		
+//		startLocationServices()
+//	}
+	
+	func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+	{
+		print("Errors: " + error.localizedDescription)
 	}
 	
 	func loadInitialData() {
@@ -77,29 +219,32 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 		// 4
 		let jsonData = JSONValue.fromObject(jsonObject)?["data"]?.array {
 			for landmarkJSON in jsonData {
-				if let landmarkJSON = landmarkJSON.array,
-					// 5
-					landmark = Landmark.fromJSON(landmarkJSON) {
+				if let landmarkJSON = landmarkJSON.array,landmark = Landmark.fromJSON(landmarkJSON) {
 						landmarks.append(landmark)
-					}
+				}
 			}
 		}
-		for landmark in landmarks {
-			mapView.addAnnotation(landmark)
-		}
 	}
 	
 	
+	func distanceBetweenPoints(startPoint startPoint: CGPoint, endPoint endPoint: CGPoint) -> Int {
+		let distance = Int(CGPointDistance(from: startPoint, to: endPoint) * 100)
+		return distance
+	}
 	
+	func CGPointDistanceSquared(from from: CGPoint, to: CGPoint) -> CGFloat {
+		return (from.x - to.x) * (from.x - to.x) + (from.y - to.y) * (from.y - to.y);
+	}
+	
+	func CGPointDistance(from from: CGPoint, to: CGPoint) -> CGFloat {
+		return sqrt(CGPointDistanceSquared(from: from, to: to));
+	}
 
 	
-	
-	
-	let regionRadius: CLLocationDistance = 1000
-	func centerMapOnLocation(location: CLLocation) {
-		let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
-		mapView.setRegion(coordinateRegion, animated: true)
-	}
+//	func centerMapOnLocation(location: CLLocation) {
+//		let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+//		mapView.setRegion(coordinateRegion, animated: true)
+//	}
 	
 	
 //	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])  {

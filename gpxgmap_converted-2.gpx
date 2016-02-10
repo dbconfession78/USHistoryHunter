@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="labs.coruscantconsulting.co.uk" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+  <metadata>
+    <link href="http://www.coruscantconsulting.co.uk">
+      <text>Coruscant Consulting Ltd. Labs</text>
+    </link>
+    <!--desc>Map data copyright 2015 Google</desc-->
+    <!--copyright author="Google Inc">
+    	<year>2015</year>
+    	<license>https://developers.google.com/maps/terms</license>
+    </copyright-->
+    <!--url>https://www.google.co.uk/maps/dir/518+Gregory+Ave,+Weehawken,+NJ+07086/5+Cooper+Dr,+Wanaque,+NJ/@40.9001853,-74.433352,10z/am=t/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c2582be07cfd41:0x8872a94164ca461b!2m2!1d-74.0255686!2d40.7659273!1m5!1m1!1s0x89c31c32a53ed06d:0x91ee520bc029e41a!2m2!1d-74.265722!2d41.0605059!3e2?hl=en</url-->
+    <time>2016-02-03T01:01:58Z</time>
+  </metadata>
+  <wpt lat="40.7659273" lon="-74.0255686">
+    <name>518 Gregory Ave</name>
+    <desc>518 Gregory Ave, Weehawken, NJ 07086, USA</desc>
+  </wpt>
+  <wpt lat="41.0605059" lon="-74.265722">
+    <name>5 Cooper Dr</name>
+    <desc>5 Cooper Dr, Wanaque, NJ 07465, USA</desc>
+  </wpt>
+<rte>
+  <name>518 Gregory Ave to 5 Cooper Dr</name>
+  <rtept lat="40.7659273" lon="-74.0255686">
+    <name>518 Gregory Ave</name>
+  </rtept>
+  <rtept lat="40.7660404" lon="-74.0258207">
+    <name>RP001</name>
+  </rtept>
+  <rtept lat="40.7670086" lon="-74.0250022">
+    <name>RP002</name>
+  </rtept>
+  <rtept lat="40.7750647" lon="-74.0317413">
+    <name>RP003</name>
+  </rtept>
+  <rtept lat="40.7847816" lon="-74.0333039">
+    <name>RP004</name>
+  </rtept>
+  <rtept lat="40.8311028" lon="-74.0101843">
+    <name>RP005</name>
+  </rtept>
+  <rtept lat="40.8323367" lon="-74.0102938">
+    <name>RP006</name>
+  </rtept>
+  <rtept lat="40.8338439" lon="-74.0111362">
+    <name>RP007</name>
+  </rtept>
+  <rtept lat="40.8373347" lon="-74.0175999">
+    <name>RP008</name>
+  </rtept>
+  <rtept lat="40.8472531" lon="-74.0271643">
+    <name>RP009</name>
+  </rtept>
+  <rtept lat="40.8493434" lon="-74.0270425">
+    <name>RP010</name>
+  </rtept>
+  <rtept lat="40.8504032" lon="-74.0263933">
+    <name>RP011</name>
+  </rtept>
+  <rtept lat="40.8527875" lon="-74.0333365">
+    <name>RP012</name>
+  </rtept>
+  <rtept lat="40.8559525" lon="-74.0481247">
+    <name>RP013</name>
+  </rtept>
+  <rtept lat="40.8654976" lon="-74.0625412">
+    <name>RP014</name>
+  </rtept>
+  <rtept lat="40.8935019" lon="-74.1113611">
+    <name>RP015</name>
+  </rtept>
+  <rtept lat="40.8939423" lon="-74.1132428">
+    <name>RP016</name>
+  </rtept>
+  <rtept lat="40.9191311" lon="-74.1256301">
+    <name>RP017</name>
+  </rtept>
+  <rtept lat="40.9181655" lon="-74.1320582">
+    <name>RP018</name>
+  </rtept>
+  <rtept lat="40.9199083" lon="-74.1321989">
+    <name>RP019</name>
+  </rtept>
+  <rtept lat="40.9226172" lon="-74.1553242">
+    <name>RP020</name>
+  </rtept>
+  <rtept lat="40.9253644" lon="-74.155328">
+    <name>RP021</name>
+  </rtept>
+  <rtept lat="40.925724" lon="-74.1655091">
+    <name>RP022</name>
+  </rtept>
+  <rtept lat="40.9259054" lon="-74.1655101">
+    <name>RP023</name>
+  </rtept>
+  <rtept lat="40.9265161" lon="-74.1664489">
+    <name>RP024</name>
+  </rtept>
+  <rtept lat="40.9275759" lon="-74.1702075">
+    <name>RP025</name>
+  </rtept>
+  <rtept lat="40.9395292" lon="-74.187955">
+    <name>RP026</name>
+  </rtept>
+  <rtept lat="40.9442892" lon="-74.2037183">
+    <name>RP027</name>
+  </rtept>
+  <rtept lat="40.9590839" lon="-74.2314883">
+    <name>RP028</name>
+  </rtept>
+  <rtept lat="40.9996628" lon="-74.2893226">
+    <name>RP029</name>
+  </rtept>
+  <rtept lat="41.0079521" lon="-74.2954105">
+    <name>RP030</name>
+  </rtept>
+  <rtept lat="41.0574974" lon="-74.2867537">
+    <name>RP031</name>
+  </rtept>
+  <rtept lat="41.056509" lon="-74.281707">
+    <name>RP032</name>
+  </rtept>
+  <rtept lat="41.05964" lon="-74.279995">
+    <name>RP033</name>
+  </rtept>
+  <rtept lat="41.060962" lon="-74.2664469">
+    <name>RP034</name>
+  </rtept>
+  <rtept lat="41.0594898" lon="-74.2660879">
+    <name>RP035</name>
+  </rtept>
+  <rtept lat="41.060031" lon="-74.265189">
+    <name>RP036</name>
+  </rtept>
+  <rtept lat="41.0605059" lon="-74.265722">
+    <name>5 Cooper Dr</name>
+  </rtept>
+</rte>
+</gpx>
