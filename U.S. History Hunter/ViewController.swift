@@ -18,10 +18,15 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 	
 	struct MyVars {
 		static var prevLoc = CLLocation()
-		static var latitude = CLLocationDegrees()
-		static var longitude = CLLocationDegrees()
+		
+		// TODO:  USE THIS TO TEST SIMULATED MOVEMENT ON MAP
+		
+		static var lats = [40.759211, 40.859211, 40.959211, 41.059211, 41.159211]
+		static var longs =  [-73.984638, -73.984638, -73.984638, -73.984638, -73.784638]
+		// TODO:  USE THIS TO TEST SIMULATED MOVEMENT ON MAP
 	}
 	
+	var coordIndex = 0
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -36,48 +41,52 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 		loadInitialData()
 	}
 	
-	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		var prevLoc = MyVars.prevLoc
-		let userLoction: CLLocation = locations[0]
-		
-		let distance = calculateDisatnceBetweenTwoLocations(prevLoc, destination: userLoction)
-		if prevLoc != userLoction {
-			prevLoc = userLoction
-			MyVars.prevLoc = userLoction
-		}
-		
-		var latitude: CLLocationDegrees = MyVars.latitude
-		var longitude: CLLocationDegrees = MyVars.longitude
-		if distance > 1000 {
-			latitude = userLoction.coordinate.latitude
-			longitude = userLoction.coordinate.longitude
-			let latDelta: CLLocationDegrees = 0.05
-			let lonDelta: CLLocationDegrees = 0.05
-//			let span = mapView.region.span
-			let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-			let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-			let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-			self.mapView.setRegion(region, animated: false)
-			self.mapView.showsUserLocation = true
-			updateVisiblePins(region: region)
-		} else {
-			latitude = userLoction.coordinate.latitude
-			longitude = userLoction.coordinate.longitude
-			let span = mapView.region.span
-			let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-			let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-//			self.mapView.setRegion(region, animated: false)
-			self.mapView.showsUserLocation = true
-			updateVisiblePins(region: region)
-		}
 
-		if latitude != MyVars.latitude {
-			print("\(latitude), \(longitude)")
+	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//		if coordIndex == 3 {
+//			locationManager.stopUpdatingLocation()
+//		} else {
+			var prevLoc = MyVars.prevLoc
+			let userLoction: CLLocation = locations[0]
+			
+			let distance = calculateDisatnceBetweenTwoLocations(prevLoc, destination: userLoction)
+			if prevLoc != userLoction {
+				prevLoc = userLoction
+				MyVars.prevLoc = userLoction
+//			}
+			
+			
+			if distance > 1000 {
+							let latitude = userLoction.coordinate.latitude
+							let longitude = userLoction.coordinate.longitude
+//				let latitude = MyVars.lats[coordIndex]
+//				let longitude = MyVars.longs[coordIndex]
+//				coordIndex++
+				
+				let latDelta: CLLocationDegrees = 0.05
+				let lonDelta: CLLocationDegrees = 0.05
+				//			let span = mapView.region.span
+				let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+				let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+				let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+				self.mapView.setRegion(region, animated: false)
+				self.mapView.showsUserLocation = true
+				updateVisiblePins(region: region)
+			} else {
+							let latitude = userLoction.coordinate.latitude
+							let longitude = userLoction.coordinate.longitude
+//				let latitude = MyVars.lats[coordIndex]
+//				let longitude = MyVars.longs[coordIndex]
+//				coordIndex++
+				
+				let span = mapView.region.span
+				let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+				let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+//				self.mapView.setRegion(region, animated: false)
+				self.mapView.showsUserLocation = true
+				updateVisiblePins(region: region)
+			}
 		}
-		MyVars.latitude = latitude
-		MyVars.longitude = longitude
-		
-		
 	}
 
 	

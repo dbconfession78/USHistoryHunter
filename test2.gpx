@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<gpx
-	xmlns="http://www.topografix.com/GPX/1/1"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
-	version="1.1"
-	creator="gpx-poi.com">
-	
-	<wpt lat="40.761041" lon="-74.021759">
-	<time>2016-02-02T20:40:43Z</time> </wpt>
-	
-	<wpt lat="40.753759" lon="-74.029827">
-	<time>2016-02-02T20:44:04Z</time> </wpt>
-
+<gpx>
+	<wpt lat="38.877678" lon="-77.036517"></wpt>
+	<wpt lat="38.857678" lon="-77.036517"></wpt>
+	<wpt lat="38.837678" lon="-77.036517"></wpt>
+	<wpt lat="38.817678" lon="-77.036517"></wpt>
+	<wpt lat="38.797678" lon="-77.036517"></wpt>
+	<wpt lat="38.777678" lon="-77.036517"></wpt>
+	<wpt lat="38.757678" lon="-77.036517"></wpt>
+	<wpt lat="38.737678" lon="-77.036517"></wpt>
+	<wpt lat="38.717678" lon="-77.036517"></wpt>
+	<wpt lat="38.697678" lon="-77.036517"></wpt>
+	<wpt lat="38.677678" lon="-77.036517"></wpt>
+	<wpt lat="38.647678" lon="-77.036517"></wpt>
+	<wpt lat="38.627678" lon="-77.036517"></wpt>
+	<wpt lat="38.607678" lon="-77.036517"></wpt>
+	<wpt lat="38.587678" lon="-77.036517"></wpt>
+	<wpt lat="38.567678" lon="-77.036517"></wpt>
+	<wpt lat="38.547678" lon="-77.036517"></wpt>
+	<wpt lat="38.527678" lon="-77.036517"></wpt>
+	<wpt lat="38.507678" lon="-77.036517"></wpt>
+	<wpt lat="38.467678" lon="-77.036517"></wpt>
+	<wpt lat="38.447678" lon="-77.036517"></wpt>
+	<wpt lat="38.427678" lon="-77.036517"></wpt>
+	<wpt lat="38.407678" lon="-77.036517"></wpt>
+	<wpt lat="38.387678" lon="-77.036517"></wpt>
+	<wpt lat="38.367678" lon="-77.036517"></wpt>
+	<wpt lat="38.347678" lon="-77.036517"></wpt>
+	<wpt lat="38.327678" lon="-77.036517"></wpt>
+	<wpt lat="38.307678" lon="-77.036517"></wpt>
+	<wpt lat="38.287678" lon="-77.036517"></wpt>
+	<wpt lat="38.267678" lon="-77.036517"></wpt>
+	<wpt lat="38.247678" lon="-77.036517"></wpt>
+	<wpt lat="38.227678" lon="-77.036517"></wpt>
+	<wpt lat="38.207678" lon="-77.036517"></wpt>
+	<wpt lat="38.187678" lon="-77.036517"></wpt>
 </gpx>
