@@ -33,12 +33,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 		self.locationManager = CLLocationManager()
 		self.locationManager.delegate = self
 		self.locationManager.requestWhenInUseAuthorization()
-		self.mapView.showsUserLocation = true
 		self.locationManager.startUpdatingLocation()
+		self.mapView.showsUserLocation = true
 //		self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
 
 		var landmarks: [Landmark] = [Landmark]()
 		loadInitialData()
+//		locationManager.request
 	}
 	
 
@@ -55,13 +56,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 				MyVars.prevLoc = userLoction
 //			}
 			
-			
-			if distance > 1000 {
-							let latitude = userLoction.coordinate.latitude
-							let longitude = userLoction.coordinate.longitude
+			//TODO:  change back to 1000 if 5 isn't working
+			if distance > 5 {
+			//TODO:  change back to 1000 if 5 isn't working
+				
+				let latitude = userLoction.coordinate.latitude
+				let longitude = userLoction.coordinate.longitude
+				
+				//TODO:  UNHIDE TO SIMULATE MOVEMENT
+				
 //				let latitude = MyVars.lats[coordIndex]
 //				let longitude = MyVars.longs[coordIndex]
 //				coordIndex++
+				
+				//TODO:  UNHIDE TO SIMULATE MOVEMENT
 				
 				let latDelta: CLLocationDegrees = 0.05
 				let lonDelta: CLLocationDegrees = 0.05
@@ -69,15 +77,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 				let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
 				let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
 				let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-				self.mapView.setRegion(region, animated: false)
 				self.mapView.showsUserLocation = true
+				self.mapView.setRegion(region, animated: true)
 				updateVisiblePins(region: region)
 			} else {
-							let latitude = userLoction.coordinate.latitude
-							let longitude = userLoction.coordinate.longitude
+				let latitude = userLoction.coordinate.latitude
+				let longitude = userLoction.coordinate.longitude
+				
+				//TODO:  UNHIDE TO SIMULATE MOVEMENT
+				
 //				let latitude = MyVars.lats[coordIndex]
 //				let longitude = MyVars.longs[coordIndex]
 //				coordIndex++
+				
+				//TODO:  UNHIDE TO SIMULATE MOVEMENT
 				
 				let span = mapView.region.span
 				let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
@@ -97,6 +110,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 		return distanceKM
 	}
 	
+	//*** DONT REMOVE THESE AS THEY MAY BE USEFUL AT SOME POINT ****
 //	func startLocationServices() {
 //		if locationManager.delegate == nil {
 //			self.locationManager = CLLocationManager()
@@ -125,7 +139,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //		
 //	}
 
-	
 	
 //	locationManager(locationManager(manager, didUpdateLocations: [locations])
 
@@ -156,11 +169,16 @@ func updateVisiblePins(region region: MKCoordinateRegion) {
 //			let distance = distanceBetweenPoints(startPoint: userLocation, endPoint: landmarkLocation)
 			let distance = calculateDisatnceBetweenTwoLocations(userLocation!, destination: landmarkLocation)
 			
+			//TODO:  remove if/else and .removeAnnotations to show all pins
+			//TODO: replace if/else and .removeAnnotaions to show local pins
 			if distance < 30 {
 				mapView.addAnnotation(landmark)
 			} else {
 				mapView.removeAnnotation(landmark)
 			}
+			//TODO:  remove if/else and .removeAnnotations to show all pins
+			//TODO: replace if/else and .removeAnnotaions to show local pins
+			
 		}
 	}
 	
