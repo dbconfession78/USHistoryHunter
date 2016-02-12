@@ -171,11 +171,11 @@ func updateVisiblePins(region region: MKCoordinateRegion) {
 			
 			//TODO:  remove if/else and .removeAnnotations to show all pins
 			//TODO: replace if/else and .removeAnnotaions to show local pins
-			if distance < 30 {
+//			if distance < 30 {
 				mapView.addAnnotation(landmark)
-			} else {
-				mapView.removeAnnotation(landmark)
-			}
+//			} else {
+//				mapView.removeAnnotation(landmark)
+//			}
 			//TODO:  remove if/else and .removeAnnotations to show all pins
 			//TODO: replace if/else and .removeAnnotaions to show local pins
 			
