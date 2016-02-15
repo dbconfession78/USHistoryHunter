@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="labs.coruscantconsulting.co.uk" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+  <metadata>
+    <link href="http://www.coruscantconsulting.co.uk">
+      <text>Coruscant Consulting Ltd. Labs</text>
+    </link>
+    <!--desc>Map data copyright 2015 Google</desc-->
+    <!--copyright author="Google Inc">
+    	<year>2015</year>
+    	<license>https://developers.google.com/maps/terms</license>
+    </copyright-->
+    <!--url>https://www.google.co.uk/maps/dir/518+Gregory+Ave,+Weehawken,+NJ+07086/1636+Lexington+Avenue,+New+York,+NY/@40.7762713,-74.022934,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89c2582be07cfd41:0x8872a94164ca461b!2m2!1d-74.0255686!2d40.7659273!1m5!1m1!1s0x89c2f602b55c194d:0xdbed8ad14950f29b!2m2!1d-73.947665!2d40.790794?hl=en</url-->
+    <time>2016-02-12T20:01:28Z</time>
+  </metadata>
+  <wpt lat="40.7659273" lon="-74.0255686">
+    <name>518 Gregory Ave</name>
+    <desc>518 Gregory Ave, Weehawken, NJ 07086, USA</desc>
+  </wpt>
+  <wpt lat="40.790794" lon="-73.947665">
+    <name>1636 Lexington Avenue</name>
+    <desc>1636 Lexington Ave, New York, NY 10029, USA</desc>
+  </wpt>
+<rte>
+  <name>518 Gregory Ave to 1636 Lexington Avenue</name>
+  <rtept lat="40.7659273" lon="-74.0255686">
+    <name>518 Gregory Ave</name>
+  </rtept>
+  <rtept lat="40.7660404" lon="-74.0258207">
+    <name>RP001</name>
+  </rtept>
+  <rtept lat="40.7652936" lon="-74.0264049">
+    <name>RP002</name>
+  </rtept>
+  <rtept lat="40.7650336" lon="-74.0253446">
+    <name>RP003</name>
+  </rtept>
+  <rtept lat="40.760199" lon="-74.0283405">
+    <name>RP004</name>
+  </rtept>
+  <rtept lat="40.7598615" lon="-74.0269612">
+    <name>RP005</name>
+  </rtept>
+  <rtept lat="40.760092" lon="-74.0277566">
+    <name>RP006</name>
+  </rtept>
+  <rtept lat="40.7613298" lon="-74.0268841">
+    <name>RP007</name>
+  </rtept>
+  <rtept lat="40.7618103" lon="-74.0263935">
+    <name>RP008</name>
+  </rtept>
+  <rtept lat="40.7662405" lon="-74.0223598">
+    <name>RP009</name>
+  </rtept>
+  <rtept lat="40.7624908" lon="-74.0099137">
+    <name>RP010</name>
+  </rtept>
+  <rtept lat="40.757122" lon="-73.997094">
+    <name>RP011</name>
+  </rtept>
+  <rtept lat="40.7567103" lon="-73.9959495">
+    <name>RP012</name>
+  </rtept>
+  <rtept lat="40.757378" lon="-73.9950666">
+    <name>RP013</name>
+  </rtept>
+  <rtept lat="40.75838" lon="-73.9943676">
+    <name>RP014</name>
+  </rtept>
+  <rtept lat="40.7613466" lon="-74.0016331">
+    <name>RP015</name>
+  </rtept>
+  <rtept lat="40.795861" lon="-73.9765567">
+    <name>RP016</name>
+  </rtept>
+  <rtept lat="40.7961459" lon="-73.9752951">
+    <name>RP017</name>
+  </rtept>
+  <rtept lat="40.7915819" lon="-73.9644754">
+    <name>RP018</name>
+  </rtept>
+  <rtept lat="40.7879123" lon="-73.955752">
+    <name>RP019</name>
+  </rtept>
+  <rtept lat="40.7865936" lon="-73.9526345">
+    <name>RP020</name>
+  </rtept>
+  <rtept lat="40.7915628" lon="-73.9486997">
+    <name>RP021</name>
+  </rtept>
+  <rtept lat="40.7909485" lon="-73.9472379">
+    <name>RP022</name>
+  </rtept>
+  <rtept lat="40.790794" lon="-73.947665">
+    <name>1636 Lexington Avenue</name>
+  </rtept>
+</rte>
+</gpx>

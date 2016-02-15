@@ -19,11 +19,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 	struct MyVars {
 		static var prevLoc = CLLocation()
 		
-		// TODO:  USE THIS TO TEST SIMULATED MOVEMENT ON MAP
+		// TODO:  UNHIDE TO SIMULATE WASHINGTON, D.C. SOUTHWARD MOVEMENT
+//		static var lats = [40.759211, 40.859211, 40.959211, 41.059211, 41.159211]
+//		static var longs =  [-73.984638, -73.984638, -73.984638, -73.984638, -73.784638]
 		
-		static var lats = [40.759211, 40.859211, 40.959211, 41.059211, 41.159211]
-		static var longs =  [-73.984638, -73.984638, -73.984638, -73.984638, -73.784638]
-		// TODO:  USE THIS TO TEST SIMULATED MOVEMENT ON MAP
+		// TODO:  UNHIDE TO SIMULATE LINCOLN TUNNEL TO JAYSON WOOLEY'S HOME
+//		static var lats = [40.728593]
+//		static var longs =  [-74.031778]
 	}
 	
 	var coordIndex = 0
@@ -64,12 +66,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 				let longitude = userLoction.coordinate.longitude
 				
 				//TODO:  UNHIDE TO SIMULATE MOVEMENT
-				
 //				let latitude = MyVars.lats[coordIndex]
 //				let longitude = MyVars.longs[coordIndex]
 //				coordIndex++
-				
-				//TODO:  UNHIDE TO SIMULATE MOVEMENT
 				
 				let latDelta: CLLocationDegrees = 0.05
 				let lonDelta: CLLocationDegrees = 0.05
@@ -89,8 +88,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //				let latitude = MyVars.lats[coordIndex]
 //				let longitude = MyVars.longs[coordIndex]
 //				coordIndex++
-				
-				//TODO:  UNHIDE TO SIMULATE MOVEMENT
 				
 				let span = mapView.region.span
 				let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
@@ -140,7 +137,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //	}
 
 	
-//	locationManager(locationManager(manager, didUpdateLocations: [locations])
+//	locationManager(locationManager(manager, didUpdateLocations: [locations])0
 
 
 func updateVisiblePins(region region: MKCoordinateRegion) {
@@ -171,11 +168,11 @@ func updateVisiblePins(region region: MKCoordinateRegion) {
 			
 			//TODO:  remove if/else and .removeAnnotations to show all pins
 			//TODO: replace if/else and .removeAnnotaions to show local pins
-//			if distance < 30 {
+			if distance < 30 {
 				mapView.addAnnotation(landmark)
-//			} else {
-//				mapView.removeAnnotation(landmark)
-//			}
+			} else {
+				mapView.removeAnnotation(landmark)
+			}
 			//TODO:  remove if/else and .removeAnnotations to show all pins
 			//TODO: replace if/else and .removeAnnotaions to show local pins
 			
@@ -221,7 +218,7 @@ func updateVisiblePins(region region: MKCoordinateRegion) {
 	
 	func loadInitialData() {
 		// 1
-		let fileName = NSBundle.mainBundle().pathForResource("PublicLandmark", ofType: "json");
+		let fileName = NSBundle.mainBundle().pathForResource("PublicLandmark", ofType: "json")
 		
 		var data: NSData = NSData()
 		do {

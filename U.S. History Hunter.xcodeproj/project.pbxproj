@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFB4843D1C6FE33F002CFAB8 /* LandmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB4843C1C6FE33F002CFAB8 /* LandmarkTableViewController.swift */; };
 		EFC037391C557A4500F837AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC037381C557A4500F837AB /* AppDelegate.swift */; };
 		EFC0373B1C557A4500F837AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC0373A1C557A4500F837AB /* ViewController.swift */; };
 		EFC0373E1C557A4500F837AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC0373C1C557A4500F837AB /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		EFC0376B1C557C7200F837AB /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC0376A1C557C7200F837AB /* Landmark.swift */; };
 		EFC0376D1C55803800F837AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0376C1C55803800F837AB /* MapKit.framework */; };
 		EFC0376F1C55804C00F837AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC0376E1C55804C00F837AB /* CoreLocation.framework */; };
+		EFCB202F1C6E6E2D0057B010 /* routeTo_JaysonWooley.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EFCB202E1C6E6E2D0057B010 /* routeTo_JaysonWooley.gpx */; };
 		EFF9707B1C61633900426719 /* test2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EFF9707A1C61633900426719 /* test2.gpx */; };
 		EFF9707D1C61737900426719 /* gpxgmap_converted.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EFF9707C1C61737900426719 /* gpxgmap_converted.gpx */; };
 		EFF9707F1C61892C00426719 /* gpxgmap_converted-2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EFF9707E1C61892C00426719 /* gpxgmap_converted-2.gpx */; };
@@ -42,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFB4843C1C6FE33F002CFAB8 /* LandmarkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandmarkTableViewController.swift; path = ../LandmarkTableViewController.swift; sourceTree = "<group>"; };
 		EFC037351C557A4500F837AB /* U.S. History Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "U.S. History Hunter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC037381C557A4500F837AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC0373A1C557A4500F837AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,11 +58,12 @@
 		EFC037541C557A4500F837AB /* U.S. History HunterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "U.S. History HunterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC037581C557A4500F837AB /* U_S__History_HunterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U_S__History_HunterUITests.swift; sourceTree = "<group>"; };
 		EFC0375A1C557A4500F837AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFC037661C557C2300F837AB /* PublicLandmark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicLandmark.json; sourceTree = "<group>"; };
-		EFC037681C557C3200F837AB /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		EFC037661C557C2300F837AB /* PublicLandmark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PublicLandmark.json; path = ../PublicLandmark.json; sourceTree = "<group>"; };
+		EFC037681C557C3200F837AB /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = ../JSON.swift; sourceTree = "<group>"; };
 		EFC0376A1C557C7200F837AB /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		EFC0376C1C55803800F837AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EFC0376E1C55804C00F837AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EFCB202E1C6E6E2D0057B010 /* routeTo_JaysonWooley.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = routeTo_JaysonWooley.gpx; sourceTree = "<group>"; };
 		EFF9707A1C61633900426719 /* test2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test2.gpx; sourceTree = "<group>"; };
 		EFF9707C1C61737900426719 /* gpxgmap_converted.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gpxgmap_converted.gpx; sourceTree = "<group>"; };
 		EFF9707E1C61892C00426719 /* gpxgmap_converted-2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "gpxgmap_converted-2.gpx"; sourceTree = "<group>"; };
@@ -95,13 +99,9 @@
 		EFC0372C1C557A4500F837AB = {
 			isa = PBXGroup;
 			children = (
-				EFF9707E1C61892C00426719 /* gpxgmap_converted-2.gpx */,
-				EFF9707C1C61737900426719 /* gpxgmap_converted.gpx */,
-				EFF9707A1C61633900426719 /* test2.gpx */,
-				EFC037681C557C3200F837AB /* JSON.swift */,
-				EFC037661C557C2300F837AB /* PublicLandmark.json */,
 				EFC037371C557A4500F837AB /* U.S. History Hunter */,
 				EFC037701C55806D00F837AB /* Frameworks */,
+				EFCB20301C6E8DB80057B010 /* GPX Files */,
 				EFC0374C1C557A4500F837AB /* U.S. History HunterTests */,
 				EFC037571C557A4500F837AB /* U.S. History HunterUITests */,
 				EFC037361C557A4500F837AB /* Products */,
@@ -121,12 +121,15 @@
 		EFC037371C557A4500F837AB /* U.S. History Hunter */ = {
 			isa = PBXGroup;
 			children = (
+				EFC037411C557A4500F837AB /* LaunchScreen.storyboard */,
+				EFC0373C1C557A4500F837AB /* Main.storyboard */,
 				EFC037381C557A4500F837AB /* AppDelegate.swift */,
 				EFC0373A1C557A4500F837AB /* ViewController.swift */,
+				EFB4843C1C6FE33F002CFAB8 /* LandmarkTableViewController.swift */,
 				EFC0376A1C557C7200F837AB /* Landmark.swift */,
-				EFC0373C1C557A4500F837AB /* Main.storyboard */,
+				EFC037681C557C3200F837AB /* JSON.swift */,
+				EFC037661C557C2300F837AB /* PublicLandmark.json */,
 				EFC0373F1C557A4500F837AB /* Assets.xcassets */,
-				EFC037411C557A4500F837AB /* LaunchScreen.storyboard */,
 				EFC037441C557A4500F837AB /* Info.plist */,
 			);
 			path = "U.S. History Hunter";
@@ -157,6 +160,17 @@
 				EFC0376C1C55803800F837AB /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFCB20301C6E8DB80057B010 /* GPX Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB202E1C6E6E2D0057B010 /* routeTo_JaysonWooley.gpx */,
+				EFF9707E1C61892C00426719 /* gpxgmap_converted-2.gpx */,
+				EFF9707C1C61737900426719 /* gpxgmap_converted.gpx */,
+				EFF9707A1C61633900426719 /* test2.gpx */,
+			);
+			name = "GPX Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC037431C557A4500F837AB /* LaunchScreen.storyboard in Resources */,
+				EFCB202F1C6E6E2D0057B010 /* routeTo_JaysonWooley.gpx in Resources */,
 				EFF9707D1C61737900426719 /* gpxgmap_converted.gpx in Resources */,
 				EFF9707B1C61633900426719 /* test2.gpx in Resources */,
 				EFC037401C557A4500F837AB /* Assets.xcassets in Resources */,
@@ -300,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB4843D1C6FE33F002CFAB8 /* LandmarkTableViewController.swift in Sources */,
 				EFC037691C557C3200F837AB /* JSON.swift in Sources */,
 				EFC0373B1C557A4500F837AB /* ViewController.swift in Sources */,
 				EFC037391C557A4500F837AB /* AppDelegate.swift in Sources */,
