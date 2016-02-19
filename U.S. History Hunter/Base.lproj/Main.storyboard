@@ -8,7 +8,7 @@
         <!--U.S. History Hunter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="U.S. History Hunter" id="BYZ-38-t0r" customClass="ViewController" customModule="U_S__History_Hunter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController" title="U.S. History Hunter" id="BYZ-38-t0r" customClass="ViewController" customModule="U_S__History_Hunter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,7 +26,7 @@
                                     <navigationItem id="dOD-2e-hIN">
                                         <barButtonItem key="leftBarButtonItem" title="List View" id="NW2-L4-b7D">
                                             <connections>
-                                                <segue destination="8F6-nn-yNp" kind="show" identifier="" id="UWq-z7-cQu"/>
+                                                <segue destination="8F6-nn-yNp" kind="show" identifier="Cell" id="UWq-z7-cQu"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="555"/>
+            <point key="canvasLocation" x="139" y="585"/>
         </scene>
         <!--Landmark Table View Controller-->
         <scene sceneID="qNw-Ys-pi5">
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="v7Q-Ma-ANm" detailTextLabel="9gx-cl-wc1" style="IBUITableViewCellStyleSubtitle" id="5GQ-JQ-pnD">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5GQ-JQ-pnD" id="AbM-Kx-1r9">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -86,7 +86,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="rxO-PB-knM"/>
+                                    <segue destination="QEP-Xx-xcF" kind="unwind" identifier="showViewController" unwindAction="unwindToMapView:" id="ljr-Ks-som"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -96,19 +96,24 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHG-qs-dN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QEP-Xx-xcF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="826" y="408"/>
+            <point key="canvasLocation" x="864" y="585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MXX-yU-XPd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uzI-E9-09z" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="uzI-E9-09z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CvU-81-9oZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="h3d-an-iCc">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QmY-xd-4dN"/>
                     </connections>
@@ -118,7 +123,4 @@
             <point key="canvasLocation" x="18" y="-211"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="rxO-PB-knM"/>
-    </inferredMetricsTieBreakers>
 </document>

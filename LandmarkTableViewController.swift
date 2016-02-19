@@ -9,27 +9,23 @@
 import UIKit
 
 class LandmarkTableViewController: UITableViewController {
-	
-//	@IBOutlet weak var tableViewCell: UITableViewCell!
+	weak var previousVC: UIViewController!
 	var landmarks = [Landmark]()
 	var landmarkNames: [String] = [String]()
 	var landmarkAddresses: [String] = [String]()
-	
+
+
 	//TODO: find images for each landmark (try googlemaps)
 	var landmarkImages = [""]
 	
     override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad()
 		loadInitialData()
 		for landmark in landmarks {
 			landmarkNames.append(landmark.title!)
 			landmarkAddresses.append(landmark.locationName)
 		}
     }
-	
-	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		print("test")
-	}
 	
 	
 	// Pulls landmark info from JSON file
@@ -58,15 +54,15 @@ class LandmarkTableViewController: UITableViewController {
 							landmarks.append(landmark)
 					}
 				}
+			}
 		}
-	}
+	
 	
 	// populates UI
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
 		let cellIndentifier = "Cell"
 		let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath)
-		
 		
 		// Configure the cell...
 		cell.textLabel?.text = landmarkNames[indexPath.row]
@@ -80,8 +76,17 @@ class LandmarkTableViewController: UITableViewController {
 	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+		
     }
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+		if segue.identifier == "showViewController" {
+			var vc = segue.destinationViewController as! ViewController
+			let row = tableView.indexPathForSelectedRow?.row
+			vc.rowIndex = row!
+		}
+	}
+	
 
     // MARK: - Table view data source
 
@@ -90,12 +95,12 @@ class LandmarkTableViewController: UITableViewController {
         return 1
     }
 
-	// sets the number of rows
+	// sets the numrber of rows
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return landmarkNames.count
     }
-
+	
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -135,10 +140,6 @@ class LandmarkTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        */
 
 }

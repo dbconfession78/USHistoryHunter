@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFA3E9A71C72CB3A0050B39D /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA3E9A61C72CB3A0050B39D /* PlayerDetailsViewController.swift */; };
 		EFB4843D1C6FE33F002CFAB8 /* LandmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB4843C1C6FE33F002CFAB8 /* LandmarkTableViewController.swift */; };
 		EFC037391C557A4500F837AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC037381C557A4500F837AB /* AppDelegate.swift */; };
 		EFC0373B1C557A4500F837AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC0373A1C557A4500F837AB /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFA3E9A61C72CB3A0050B39D /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 		EFB4843C1C6FE33F002CFAB8 /* LandmarkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandmarkTableViewController.swift; path = ../LandmarkTableViewController.swift; sourceTree = "<group>"; };
 		EFC037351C557A4500F837AB /* U.S. History Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "U.S. History Hunter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC037381C557A4500F837AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		EFC0372C1C557A4500F837AB = {
 			isa = PBXGroup;
 			children = (
+				EFA3E9A61C72CB3A0050B39D /* PlayerDetailsViewController.swift */,
 				EFC037371C557A4500F837AB /* U.S. History Hunter */,
 				EFC037701C55806D00F837AB /* Frameworks */,
 				EFCB20301C6E8DB80057B010 /* GPX Files */,
@@ -317,6 +320,7 @@
 			files = (
 				EFB4843D1C6FE33F002CFAB8 /* LandmarkTableViewController.swift in Sources */,
 				EFC037691C557C3200F837AB /* JSON.swift in Sources */,
+				EFA3E9A71C72CB3A0050B39D /* PlayerDetailsViewController.swift in Sources */,
 				EFC0373B1C557A4500F837AB /* ViewController.swift in Sources */,
 				EFC037391C557A4500F837AB /* AppDelegate.swift in Sources */,
 				EFC0376B1C557C7200F837AB /* Landmark.swift in Sources */,
