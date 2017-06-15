@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uzI-E9-09z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uzI-E9-09z">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--U.S. History Hunter-->
@@ -18,30 +19,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jlm-0y-buO">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uBC-E2-zOW"/>
+                                </connections>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B72-bP-dy8">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4K7-kD-ZZ7">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <navigationItem id="dOD-2e-hIN">
+                                    <navigationItem id="fbX-dw-J9a">
                                         <barButtonItem key="leftBarButtonItem" title="List View" id="NW2-L4-b7D">
                                             <connections>
-                                                <segue destination="8F6-nn-yNp" kind="show" identifier="Cell" id="UWq-z7-cQu"/>
+                                                <segue destination="8F6-nn-yNp" kind="show" identifier="showListView" id="UWq-z7-cQu"/>
                                             </connections>
                                         </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Test Wiki" id="Pwo-WP-YoN">
+                                                <connections>
+                                                    <action selector="testWikiButtonActionPerformed:" destination="BYZ-38-t0r" id="NFa-vH-OVb"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Current Location" id="FVo-m8-yk6">
+                                                <connections>
+                                                    <action selector="Current:" destination="BYZ-38-t0r" id="PDP-DU-7D7"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jlm-0y-buO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I3t-ym-HxF"/>
-                            <constraint firstItem="Jlm-0y-buO" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="JfL-eX-Vpf"/>
-                            <constraint firstItem="Jlm-0y-buO" firstAttribute="trailing" secondItem="B72-bP-dy8" secondAttribute="trailing" id="ap3-f5-uf1"/>
-                            <constraint firstItem="Jlm-0y-buO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b2O-Ap-urb"/>
-                            <constraint firstAttribute="trailing" secondItem="Jlm-0y-buO" secondAttribute="trailing" id="ej3-AG-UDj"/>
-                            <constraint firstItem="Jlm-0y-buO" firstAttribute="leading" secondItem="B72-bP-dy8" secondAttribute="leading" id="qYn-yG-4ZB"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B72-bP-dy8" secondAttribute="bottom" id="tsB-Gs-2c8"/>
+                            <constraint firstItem="Jlm-0y-buO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Ia-Ww-XI9"/>
+                            <constraint firstItem="4K7-kD-ZZ7" firstAttribute="trailing" secondItem="Jlm-0y-buO" secondAttribute="trailing" id="47s-q8-v1E"/>
+                            <constraint firstItem="Jlm-0y-buO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7oz-FJ-Hsc"/>
+                            <constraint firstAttribute="trailing" secondItem="Jlm-0y-buO" secondAttribute="trailing" id="BHb-NI-iaf"/>
+                            <constraint firstItem="4K7-kD-ZZ7" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Nfa-1G-kRx"/>
+                            <constraint firstItem="4K7-kD-ZZ7" firstAttribute="top" secondItem="Jlm-0y-buO" secondAttribute="bottom" id="Phc-iD-lFR"/>
+                            <constraint firstItem="4K7-kD-ZZ7" firstAttribute="leading" secondItem="Jlm-0y-buO" secondAttribute="leading" id="uEg-Da-t8A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="U.S. History Hunter" id="RsH-XT-hzF"/>
@@ -51,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="585"/>
+            <point key="canvasLocation" x="141" y="590"/>
         </scene>
         <!--Landmark Table View Controller-->
         <scene sceneID="qNw-Ys-pi5">
@@ -86,24 +102,24 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="QEP-Xx-xcF" kind="unwind" identifier="showViewController" unwindAction="unwindToMapView:" id="ljr-Ks-som"/>
+                                    <segue destination="QEP-Xx-xcF" kind="unwind" identifier="showViewController" unwindAction="unwindToMapView:" id="T8S-gm-wfl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="delegate" destination="8F6-nn-yNp" id="hn4-rQ-8bK"/>
+                            <outlet property="delegate" destination="8F6-nn-yNp" id="e0t-xW-N6t"/>
                         </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHG-qs-dN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QEP-Xx-xcF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="864" y="585"/>
+            <point key="canvasLocation" x="816" y="585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MXX-yU-XPd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="uzI-E9-09z" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uzI-E9-09z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CvU-81-9oZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -120,7 +136,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boe-XW-hSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="-211"/>
+            <point key="canvasLocation" x="141" y="-206"/>
         </scene>
     </scenes>
 </document>
